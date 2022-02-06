@@ -9,7 +9,7 @@ const imageComp = require('compress-images');
 const cleanDist = require('del');
 
 function cleandist() {
-    return src('dest')
+    return src('dist')
 }
 
 function browsersync() {
@@ -23,7 +23,7 @@ function browsersync() {
 async function imagecomp() {
     imageComp(
         "app/images/**/*.{jpg,JPG,jpeg,JPEG,png,svg,gif}",
-        "dest/images/", { compress_force: false, statistic: true, autoupdate: true },
+        "dist/images/", { compress_force: false, statistic: true, autoupdate: true },
         false, { jpg: { engine: "mozjpeg", command: ["-quality", "60"] } }, { png: { engine: "pngquant", command: ["--quality=20-50", "-o"] } }, { svg: { engine: "svgo", command: "--multipass" } }, {
             gif: { engine: "gifsicle", command: ["--colors", "64", "--use-col=web"] },
         },
@@ -66,7 +66,7 @@ function build() {
             'app/*.html',
             'app/images/*'
         ], { base: 'app' })
-        .pipe(dest('dest'))
+        .pipe(dest('dist'))
 }
 
 function watching() {
@@ -83,4 +83,4 @@ exports.images = imagecomp;
 exports.clean = cleandist;
 
 exports.build = series(cleandist, imagecomp, build);
-exports.default = parallel(scripts, browsersync, watching);
+exports.default = parallel(scripts, styles, browsersync, watching);

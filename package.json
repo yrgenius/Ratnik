@@ -23,5 +23,8 @@
     "jquery": "^3.6.0",
     "pngquant-bin": "^6.0.0",
     "sass": "^1.38.0"
+  },
+  "dependencies": {
+    "gulp-rename": "^2.0.0"
   }
 }
