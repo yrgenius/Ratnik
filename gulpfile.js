@@ -9,7 +9,7 @@ const imageComp = require('compress-images');
 const cleanDist = require('del');
 
 function cleandist() {
-    return src('dist')
+    return src('dist');
 }
 
 function browsersync() {
@@ -17,7 +17,7 @@ function browsersync() {
         server: {
             baseDir: 'app/'
         }
-    })
+    });
 }
 
 async function imagecomp() {
@@ -32,18 +32,18 @@ async function imagecomp() {
                 browserSync.reload();
             }
         }
-    )
+    );
 }
 
 function scripts() {
     return src([
-            'node_modules/jquery/dist/jquery.js',
+            // 'node_modules/jquery/dist/jquery.js',
             'app/js/main.js'
         ])
         .pipe(concat('main.min.js'))
         .pipe(uglify())
         .pipe(dest('app/js'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function styles() {
@@ -55,18 +55,18 @@ function styles() {
             grid: true,
         }))
         .pipe(dest('app/css'))
-        .pipe(browserSync.stream())
+        .pipe(browserSync.stream());
 }
 
 function build() {
     return src([
             'app/css/style.min.css',
-            'app/font/**/*',
+            'app/fonts/**/*',
             'app/js/main.min.js',
             'app/*.html',
             'app/images/*'
         ], { base: 'app' })
-        .pipe(dest('dist'))
+        .pipe(dest('dist'));
 }
 
 function watching() {

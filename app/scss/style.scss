@@ -167,12 +167,17 @@ body {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
+    transform: rotate(180deg);
     cursor: pointer;
     transition: all 0.3s;
 }
 
 .main__title:hover::after {
-    transform: rotate(180deg);
+    transform: rotate(0deg);
+}
+
+.arrow-rotate:hover::after{
+    transform: rotate(180deg); 
 }
 
 .main__text {
@@ -290,6 +295,31 @@ body {
 }
 
 /* --- VIDEO END --- */
+
+
+/* --- GALLERY --- */
+
+.gallery{
+    padding: 50px 0;
+    &__wrapper {
+        position: relative;
+        border: 5px solid #888888;
+        border-radius: 10px;
+        padding: 20px;
+        overflow: hidden;
+    }
+    &__title {
+        position: relative;
+        text-align: center;
+        color: #fdfdfd;
+        font-size: 31px;
+        letter-spacing: 0.5em;
+        padding-top: 0;
+    }
+}
+
+/* --- GALLERY END --- */
+
 
 /* --- FOOTER --- */
 
