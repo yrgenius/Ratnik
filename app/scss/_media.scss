@@ -1,0 +1,61 @@
+@media all and (max-width: 1150px) {
+    .header {
+        justify-content: space-around;
+
+        &__right {
+            flex-direction: row;
+        }
+
+        &__social-text {
+            margin-right: 50px;
+        }
+    }
+}
+
+@media all and (max-width: 800px) {
+    .logo {
+        display: none;
+    }
+}
+
+@media all and (max-width: 700px) {
+    .header {
+        flex-direction: column;
+        &__suptitle {
+            font-size: 32px;
+            letter-spacing: 4px;
+        }
+
+        &__title {
+            font-size: 45px;
+            letter-spacing: 16px;
+        }
+    }
+}
+
+@media all and (max-width: 650px) {
+    .header {
+        &__right {
+            justify-content: center;
+        }
+
+        &__social-text {
+            margin-right: 6px;
+        }
+
+        &__wrapper-tel {
+            margin-left: 6px;
+        }
+    }
+
+    .social {
+        padding: 0;
+
+        &__link:first-child {
+            margin: 0;
+        }
+    }
+}
+
+@media all and (max-width: 500px) {
+}
