@@ -42,6 +42,7 @@ body {
     padding: 0 20px;
 }
 
+
 /* --- HEADER --- */
 
 .header {
@@ -51,7 +52,6 @@ body {
     flex-wrap: wrap;
     padding-top: 20px;
     text-align: center;
-
     &__title {
         font-family: "MFBold";
         color: #14a76c;
@@ -60,7 +60,6 @@ body {
         letter-spacing: 18px;
         text-transform: uppercase;
     }
-
     &__suptitle {
         font-family: "Jx Tabe Regular";
         color: #ffe400;
@@ -68,30 +67,25 @@ body {
         // font-size: 1.7em;
         letter-spacing: 9px;
     }
-
     &__right {
         display: flex;
         flex-flow: wrap column;
         justify-content: end;
         align-items: center;
     }
-
     &__social-text {
         line-height: initial;
         line-height: 1.4;
         padding-top: 5px;
     }
-
     &__social-text span {
         text-transform: uppercase;
     }
-
     &__wrapper-tel {
         display: flex;
         flex-direction: column;
         margin-top: 10px;
     }
-
     &__tel {
         color: #fff;
         transition: color 0.3s;
@@ -124,7 +118,9 @@ body {
     transform: scale(1.2);
 }
 
+
 /* --- HEADER END --- */
+
 
 /* --- MAIN --- */
 
@@ -176,8 +172,8 @@ body {
     transform: rotate(0deg);
 }
 
-.arrow-rotate:hover::after{
-    transform: rotate(180deg); 
+.arrow-rotate:hover::after {
+    transform: rotate(180deg);
 }
 
 .main__text {
@@ -190,18 +186,22 @@ body {
     list-style-position: inside;
 }
 
-.main__text > span {
+.main__text .one {
     display: inline-block;
     color: #d9ff00;
     padding-top: 10px;
 }
 
-.main__text > span:first-child {
+.main__text .two {
     color: #ff5100;
+    display: inline-block;
+    padding-top: 10px;
 }
 
 .main__text .three {
     color: #00ff62;
+    display: inline-block;
+    padding-top: 10px;
 }
 
 .main__text ul {
@@ -209,7 +209,9 @@ body {
     list-style: inherit;
 }
 
+
 /* --- MAIN END --- */
+
 
 /* --- VIDEO --- */
 
@@ -294,14 +296,14 @@ body {
     }
 }
 
+
 /* --- VIDEO END --- */
 
 
 /* --- GALLERY --- */
 
-.gallery{
+.gallery {
     padding: 50px 0;
-
     &__wrapper {
         position: relative;
         border: 5px solid #888888;
@@ -310,7 +312,6 @@ body {
         overflow: hidden;
         background-color: #373737;
     }
-
     &__title {
         position: relative;
         text-align: center;
@@ -319,14 +320,12 @@ body {
         letter-spacing: 0.5em;
         padding-top: 0;
     }
-
-    &__list{
+    &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
     }
-
-    &__item{
+    &__item {
         width: 45%;
         background-size: cover;
         background-repeat: no-repeat;
@@ -336,13 +335,12 @@ body {
         margin: 20px;
         overflow: hidden;
     }
-
-    &__image{
-        
+    &__image {
         // width: 100%;
         height: 100%;
     }
 }
+
 
 /* --- GALLERY END --- */
 
@@ -375,6 +373,7 @@ body {
 .footer__link:hover {
     color: #00ff99;
 }
+
 
 /* --- FOOTER END --- */
 
